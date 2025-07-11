@@ -3,7 +3,19 @@ from pydantic import BaseModel
 import joblib
 import numpy as np
 import os
+from fastapi.middleware.cors import CORSMiddleware
+
+
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500"],  # Change this later to specific domains in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Load model and scalers
 # model = joblib.load("ml_models/model.pkl")
