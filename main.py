@@ -2,11 +2,16 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import joblib
 import numpy as np
-
+import os
 app = FastAPI()
 
 # Load model and scalers
-model = joblib.load("ml_models/model.pkl")
+# model = joblib.load("ml_models/model.pkl")
+
+
+MODEL_PATH = os.getenv("MODEL_PATH", "models/model.pkl")
+model = joblib.load(MODEL_PATH)
+
 minmax_scaler = joblib.load("ml_models/minmaxscaler.pkl")
 standard_scaler = joblib.load("ml_models/standard_scaler.pkl")
 
