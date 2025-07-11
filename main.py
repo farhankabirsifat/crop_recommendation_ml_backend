@@ -9,7 +9,7 @@ app = FastAPI()
 # model = joblib.load("ml_models/model.pkl")
 
 
-MODEL_PATH = os.getenv("MODEL_PATH", "models/model.pkl")
+MODEL_PATH = os.getenv("MODEL_PATH", "ml_models/model.pkl")
 model = joblib.load(MODEL_PATH)
 
 minmax_scaler = joblib.load("ml_models/minmaxscaler.pkl")
