@@ -21,11 +21,17 @@ app.add_middleware(
 # model = joblib.load("ml_models/model.pkl")
 
 
-MODEL_PATH = os.getenv("MODEL_PATH", "ml_models/model.pkl")
+MODEL_PATH = os.getenv("MODEL_PATH", "ml_models2/model.pkl")
 model = joblib.load(MODEL_PATH)
 
-minmax_scaler = joblib.load("ml_models/minmaxscaler.pkl")
-standard_scaler = joblib.load("ml_models/standard_scaler.pkl")
+minmax_scaler = joblib.load("ml_models2/minmaxscaler.pkl")
+standard_scaler = joblib.load("ml_models2/standscaler.pkl")
+
+# MODEL_PATH = os.getenv("MODEL_PATH", "ml_models/model.pkl")
+# model = joblib.load(MODEL_PATH)
+#
+# minmax_scaler = joblib.load("ml_models/minmaxscaler.pkl")
+# standard_scaler = joblib.load("ml_models/standard_scaler.pkl")
 
 # Input schema
 class CropInput(BaseModel):
