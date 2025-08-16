@@ -13,7 +13,7 @@ label_encoder = joblib.load('ml_models3/label_encoder.pkl')
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500"],  # Change this later to specific domains in production
+    allow_origins=["*"],  # Change this later to specific domains in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
