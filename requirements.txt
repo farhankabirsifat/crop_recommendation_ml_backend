@@ -1,6 +1,8 @@
 fastapi
 uvicorn
-scikit-learn
+python-dotenv
+google-genai
 joblib
-numpy
 pandas
+numpy
+starlette
