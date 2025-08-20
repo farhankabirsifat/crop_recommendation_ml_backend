@@ -6,3 +6,4 @@ joblib
 pandas
 numpy
 starlette
+scikit-learn
